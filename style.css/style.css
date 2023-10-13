@@ -1,1 +1,164 @@
+/* Importando fontes do Google Fonts para uso no CSS */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Oxanium:wght@200&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oxanium:wght@200&display=swap');
 
+/* Definindo variáveis de cores e fontes globais no :root */
+:root {
+    --cor-primaria: #000000;        /* Cor principal (preta) */
+    --cor-secundaria: #F6F6F6;      /* Cor secundária (cinza claro) */
+    --cor-terciaria: #22D4FD;      /* Cor terciária (azul claro) */
+    --cor-hover: #1F4172;          /* Cor usada no hover (azul escuro) */
+    --cor-quartaria: #E6CCC8;      /* Cor quaternária (rosa claro) */
+
+    --fonte-primaria: 'Krona One', sans-serif;   /* Fonte primária */
+    --font-secundaria: 'Montserrat', sans-serif; /* Fonte secundária */
+}
+
+/* Reset de margens e preenchimentos para todos os elementos (*) */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais para o corpo (body) */
+body {
+    /*height: 100vh; (Este trecho está comentado, o que significa que não está em uso) */
+    box-sizing: border-box;             /* Define o modelo de caixa como "border-box" para o layout */
+    background-color: var(--cor-primaria); /* Define a cor de fundo como preta */
+    color: var(--cor-secundaria);         /* Define a cor do texto como cinza claro */
+}
+
+/* Estilos para o cabeçalho */
+.cabecalho {
+    padding: 3% 0% 0% 15%; /* Define o preenchimento superior, direito, inferior e esquerdo do cabeçalho */
+}
+
+/* Estilos para o menu no cabeçalho */
+.cabecalho__menu {
+    display: flex;  /* Faz com que os itens do menu sejam exibidos em uma linha flexível */
+    gap: 50px;       /* Define o espaço entre os itens do menu */
+}
+
+/* Estilos para os links no menu do cabeçalho */
+.cabecalho__menu__link {
+    font-family: var(--font-secundaria);  /* Define a fonte como a fonte secundária */
+    font-size: 1.37rem;                   /* Define o tamanho da fonte */
+    font-weight: 600;                    /* Define o peso da fonte como negrito */
+    color: var(--cor-terciaria);         /* Define a cor do texto como azul claro */
+    text-decoration: none;               /* Remove o sublinhado dos links */
+}
+
+/* Estilos para a seção de apresentação */
+.apresentacao {
+    padding: 5% 15%;         /* Define o preenchimento na seção de apresentação */
+    display: flex;           /* Faz com que os itens sejam exibidos em uma linha flexível */
+    align-items: center;     /* Alinha verticalmente os itens ao centro */
+    justify-content: space-between; /* Define o espaço entre os itens da seção */
+    gap: 82px;               /* Define o espaço entre os itens */
+}
+
+/* Estilos para o conteúdo na seção de apresentação */
+.apresentacao__conteudo {
+    width: 50%;          /* Define a largura como 50% do contêiner pai */
+    display: flex;       /* Faz com que os itens sejam exibidos em uma coluna flexível */
+    gap: 40px;           /* Define o espaço entre os itens */
+}
+
+/* Estilos para o título na seção de apresentação */
+.apresentacao__conteudo__titulo {
+    font-size: 1.62rem;         /* Define o tamanho da fonte */
+    font-family: var(--fonte-primaria); /* Define a fonte como a fonte primária */
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    display: flex;          /* Faz com que os itens sejam exibidos em uma linha flexível */
+    justify-content: space-between; /* Define o espaço entre os itens do contêiner */
+    padding: 20px;          /* Define o preenchimento */
+    gap: 40px;              /* Define o espaço entre os itens */
+}
+
+/* Estilo para títulos destacados (com cor azul clara) */
+.titulo-destaque {
+    color: var(--cor-terciaria); /* Define a cor do texto como azul claro */
+}
+
+/* Estilos para o texto na seção de apresentação */
+.apresentacao__conteudo__texto {
+    font-size: 1.62rem;          /* Define o tamanho da fonte */
+    font-family: var(--font-secundaria); /* Define a fonte como a fonte secundária */
+}
+
+/* Estilos para a seção de links na apresentação */
+.apresentacao__links {
+    display: flex;      /* Faz com que os itens sejam exibidos em uma coluna flexível */
+    flex-direction: column; /* Define a direção da coluna flexível */
+    justify-content: space-between; /* Define o espaço entre os itens */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    gap: 32px;           /* Define o espaço entre os itens */
+}
+
+/* Estilos para o subtítulo na seção de links */
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria); /* Define a fonte como a fonte primária */
+    font-weight: 400;                  /* Define o peso da fonte como normal */
+    font-size: 1.5rem;                 /* Define o tamanho da fonte */
+}
+
+/* Estilos para os links na seção de links (mudou o nome para navegação) */
+.apresentacao__links__link {
+    /* background-color: #22d4fd; (Pode ser azul se descomentado) */
+    display: flex;                   /* Faz com que os itens sejam exibidos em uma linha flexível */
+    justify-content: center;         /* Alinha horizontalmente os itens ao centro */
+    gap: 16px;                       /* Define o espaço entre os itens */
+    border: 2px solid var(--cor-terciaria); /* Define uma borda com cor azul clara */
+    width: 50%;                      /* Define a largura como 50% do contêiner pai */
+    text-align: center;              /* Define o alinhamento do texto ao centro */
+    border-radius: 8px;              /* Define a borda como arredondada */
+    font-size: 1.5rem;               /* Define o tamanho da fonte */
+    font-weight: 600;                /* Define o peso da fonte como negrito */
+    padding: 21.5px 0;               /* Define o preenchimento superior e inferior */
+    text-decoration: none;           /* Remove o sublinhado dos links */
+    color: var(--cor-secundaria);    /* Define a cor do texto como cinza claro */
+    font-family: var(--font-secundaria); /* Define a fonte como a fonte secundária */
+}
+
+/* Estilos para os links na seção de links no hover (quando o mouse passa por cima) */
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover); /* Define a cor de fundo como azul escuro */
+}
+
+/* Estilos para a imagem na seção de apresentação */
+.apresentacao__imagem {
+    width: 50%; /* Define a largura da imagem como 50% do contêiner pai */
+}
+
+/* Estilos para o rodapé */
+.rodape {
+    padding: 18px; /* Define o preenchimento do rodapé */
+    color: var(--cor-primaria); /* Define a cor do texto como preto */
+    background-color: var(--cor-terciaria); /* Define a cor de fundo como azul claro */
+    text-align: center; /* Define o alinhamento do texto ao centro */
+    font-family: var(--font-secundaria); /* Define a fonte como a fonte secundária */
+    font-size: 1.25rem; /* Define o tamanho da fonte */
+}
+
+/* Media query para telas com largura máxima de 1200px */
+@media (max-width: 1200px){
+    .cabecalho {
+        padding: 10%; /* Aumenta o preenchimento do cabeçalho em telas menores */
+    }
+
+    .cabecalho__menu {
+        justify-content: center; /* Centraliza os itens do menu */
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse; /* Reorganiza os itens da seção em coluna invertida */
+        padding: 5%; /* Aumenta o preenchimento na seção de apresentação */
+    }
+
+    .apresentacao__conteudo{
+        width: auto; /* Define a largura do conteúdo como automática */
+    }
+}
