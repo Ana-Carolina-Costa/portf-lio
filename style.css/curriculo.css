@@ -1,116 +1,144 @@
-
+/* Importando fontes do Google Fonts para uso no CSS */
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Oxanium:wght@200&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oxanium:wght@200&display=swap');
 
+/* Definindo variáveis de cores e fontes globais no :root */
 :root {
-    --cor-primaria: #000000;
-    --cor-secundaria: #F6F6F6;
-    --cor-terciaria:#22D4FD;
-    --cor-hover: #1F4172;
-    --cor-quartaria: #E6CCC8;
+    --cor-primaria: #000000;        /* Cor principal (preta) */
+    --cor-secundaria: #F6F6F6;      /* Cor secundária (cinza claro) */
+    --cor-terciaria: #22D4FD;      /* Cor terciária (azul claro) */
+    --cor-hover: #1F4172;          /* Cor usada no hover (azul escuro) */
+    --cor-quartaria: #E6CCC8;      /* Cor quaternária (rosa claro) */
 
-    --fonte-primaria: 'Krona One', sans-serif;
-    --font-secundaria: 'Montserrat', sans-serif;
+    --fonte-primaria: 'Krona One', sans-serif;   /* Fonte primária */
+    --font-secundaria: 'Montserrat', sans-serif; /* Fonte secundária */
 }
 
+/* Estilos gerais para o currículo (.curriculo) */
 .curriculo {
-    box-sizing: border-box;
-    background-color: var(--cor-primaria);
-    color:var(--cor-secundaria);
+    box-sizing: border-box;             /* Define o modelo de caixa como "border-box" para o layout */
+    background-color: var(--cor-primaria); /* Define a cor de fundo como preta */
+    color: var(--cor-secundaria);         /* Define a cor do texto como cinza claro */
 }
 
+/* Estilos para o cabeçalho (.cabecalho) */
 .cabecalho {
-    padding: 3% 0% 0% 15%;
+    padding: 3% 0% 0% 15%; /* Define o preenchimento superior, direito, inferior e esquerdo do cabeçalho */
 }
 
-*{
-    
-    margin: 5;
-    padding: 5;
+/* Reset de margens e preenchimentos para todos os elementos (*) */
+* {
+    margin: 5; /* Note que os valores de margem e preenchimento não estão em unidades válidas (deveriam ser "5px" ou "5%") */
+    padding: 5; 
 }
 
+/* Estilos para a imagem no currículo (.imagem) */
 .imagem {
-    display: block;
-    margin: 0 auto;
-    margin: 45px;
+    display: block; /* Define a imagem como um bloco para centralizá-la horizontalmente */
+    margin: 0 auto;  /* Centraliza a imagem horizontalmente */
+    margin: 45px;    /* Define uma margem de 45px para a imagem */
+}
+
+/* Estilos para o menu no cabeçalho (.cabecalho__menu) */
+.cabecalho__menu {
+    display: flex;  /* Faz com que os itens do menu sejam exibidos em uma linha flexível */
+    gap: 50px;       /* Define o espaço entre os itens do menu */
+    margin: 10px;    /* Define uma margem de 10px para o menu */
+}
+
+/* Estilos para os links no menu do cabeçalho (.cabecalho__menu__link) */
+.cabecalho__menu__link {
+    font-family: var(--font-secundaria);  /* Define a fonte como a fonte secundária */
+    font-size: 22px;                   /* Define o tamanho da fonte */
+    font-weight: 600;                    /* Define o peso da fonte como negrito */
+    color: var(--cor-terciaria);         /* Define a cor do texto como azul claro */
+    text-decoration: none;               /* Remove o sublinhado dos links */
+}
+
+/* Estilos para a seção de apresentação (.apresentacao) */
+.apresentacao {
+    padding: 5% 15%;         /* Define o preenchimento na seção de apresentação */
+    display: flex;           /* Faz com que os itens sejam exibidos em uma linha flexível */
+    align-items: center;     /* Alinha verticalmente os itens ao centro */
+    justify-content: space-between; /* Define o espaço entre os itens da seção */
+}
+
+/* Estilos para os subtítulos no conteúdo da apresentação (.apresentacao__conteudo__subtitulos) */
+.apresentacao__conteudo__subtitulos {
+    font-size: 18px;         /* Define o tamanho da fonte */
+    font-family: var(--fonte-primaria); /* Define a fonte como a fonte primária */
+    color: var(--cor-terciaria);        /* Define a cor do texto como azul claro */
+    justify-content: center; /* Essa propriedade não se aplica a elementos de texto; pode ser removida */
+}
+
+/* Estilos para o conteúdo na seção de apresentação (.apresentacao__conteudo) */
+.apresentacao__conteudo {
+    width: 615px;          /* Define a largura do conteúdo como 615px */
+    display: flex;       /* Faz com que os itens sejam exibidos em uma coluna flexível */
+    flex-direction: column; /* Define a direção da coluna flexível */
+    justify-content: center; /* Essa propriedade não se aplica a elementos de texto; pode ser removida */
+    gap: 40px;           /* Define o espaço entre os itens */
+    font-size: 18px;      /* Define o tamanho da fonte */
+    font-family: var(--font-secundaria); /* Define a fonte como a fonte secundária */
+}
+
+/* Estilos para o contêiner principal (.container) */
+.container {
+    display: flex;          /* Faz com que os itens sejam exibidos em uma linha flexível */
+    justify-content: space-between; /* Define o espaço entre os itens do contêiner */
+    padding: 0px;          /* Define o preenchimento como 0px; isso pode ser removido se não for necessário */
+    gap: 0px;              /* Define o espaço entre os itens como 0px; isso pode ser removido se não for necessário */
+}
+
+/* Estilos para o lado esquerdo do contêiner (.lado__esquerdo) */
+.lado__esquerdo {
+  box-sizing: border-box; /* Define o modelo de caixa como "border-box" para o layout */
+  background-color: var(--cor-primaria); /* Define a cor de fundo como preta */
+  flex: 1; /* Define a flex como 1 para ocupar o espaço disponível */
+  padding: 20px; /* Define o preenchimento como 20px */
+  border: 1 solid var(--cor-terciaria); /* Define uma borda com cor azul clara */
+  font-size: 16px; /* Define o tamanho da fonte */
+  font-family: var(--font-secundaria); /* Define a fonte como a fonte secundária */
+}
+
+/* Estilos para o lado direito do contêiner (.lado__direito) */
+.lado__direito {
+  box-sizing: border-box; /* Define o modelo de caixa como "border-box" para o layout */
+  background-color: var(--cor-primaria); /* Define a cor de fundo como preta */
+  flex: 1; /* Define a flex como 1 para ocupar o espaço disponível */
+  padding: 20px; /* Define o preenchimento como 20px */
+  border: 1 solid var(--cor-primaria); /* Define uma borda com cor preta (essa propriedade pode estar errada) */
+  font-size: 14px; /* Define o tamanho da fonte */
+  font-family: var(--font-secundaria); /* Define a fonte como a fonte secundária */
+}
+
+/* Estilos para o rodapé (.rodape) */
+.rodape {
+    padding: 18px; /* Define o preenchimento do rodapé como 18px */
+    color: var(--cor-primaria); /* Define a cor do texto como preto */
+    background-color: var(--cor-terciaria); /* Define a cor de fundo como azul claro */
+    text-align: center; /* Define o alinhamento do texto ao centro */
+    font-family: var(--font-secundaria); /* Define a fonte como a fonte secundária */
+    font-size: 18px; /* Define o tamanho da fonte como 18px */
+}
+
+/* Media query para telas com largura máxima de 1200px */
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%; /* Aumenta o preenchimento do cabeçalho em telas menores */
     }
 
-.cabecalho {
-    padding: 3% 0% 0% 15%;
+    .cabecalho__menu {
+        justify-content: center; /* Centraliza os itens do menu */
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse; /* Reorganiza os itens da seção em coluna invertida */
+        padding: 5%; /* Aumenta o preenchimento na seção de apresentação */
+    }
+
+    .apresentacao__conteudo {
+        width: auto; /* Define a largura do conteúdo como automática */
+    }
 }
-
-.cabecalho__menu {
-    display: flex;
-    gap: 50px;
-    margin: 10px;
-}
-
-.cabecalho__menu__link {
-    font-family: var(--font-secundaria);
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--cor-terciaria);
-    text-decoration: none;
-}
-
-.apresentacao {
-    padding: 5% 15%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.apresentacao__conteudo__subtitulos {
-    font-size: 18px;
-    font-family: var(--fonte-primaria);
-    color: var(--cor-terciaria);
-    justify-content: center;
-}
-
-.apresentacao__conteudo {
-    width:615px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-    font-size: 18px;
-    font-family: var(--font-secundaria);
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px;
-    gap: 0px;
-}
-
-.lado__esquerdo {
-  box-sizing: border-box;
-  background-color: var(--cor-primaria);
-  flex: 1;
-  padding: 20px;
-  border: 1 solid var(--cor-terciaria);
-  font-size: 16px;
-  font-family: var(--font-secundaria);
   
-}
-
-.lado__direito {
-  box-sizing: border-box;
-  background-color: var(--cor-primaria);
-  flex: 1;
-  padding: 20px;
-  border: 1 solid var(--cor-primaria);
-  font-size: 14px;
-  font-family: var(--font-secundaria);
- }
-
- .rodape {
-    padding: 18px;
-    color: var(--cor-primaria);
-    background-color:var(--cor-terciaria);
-    text-align: center;
-    font-family: var(--font-secundaria);
-    font-size: 18px;
-}
